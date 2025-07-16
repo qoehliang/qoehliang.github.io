@@ -2,11 +2,13 @@ site_name: Alan Liang
 site_url: https://qoehliang.github.io/
 site_author: Alan Liang
 site_description: Staff Platform Engineer specializing in AWS, DevOps, and Kubernetes solutions
+copyright: "&copy; 2024 Alan Liang"
 
 theme:
   name: material
   logo: assets/logo.svg
   favicon: assets/favicon.svg
+  custom_dir: docs/overrides
   palette:
     # Light mode
     - media: "(prefers-color-scheme: light)"
@@ -82,9 +84,9 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/alan-liang
+      link: https://github.com/alanliangdev
     - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/alan-liang
+      link: https://www.linkedin.com/in/alanliangdev/
   
 extra_css:
   - stylesheets/extra.css

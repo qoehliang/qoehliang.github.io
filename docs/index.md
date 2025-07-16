@@ -46,5 +46,5 @@ Designed and implemented self-service Kubernetes platform serving 50+ developmen
 Let's discuss cloud architecture, platform engineering, or DevOps challenges.
 
 - Email: alan.liang@example.com
-- LinkedIn: [linkedin.com/in/alan-liang](https://linkedin.com/in/alan-liang)
-- GitHub: [github.com/alan-liang](https://github.com/alan-liang)
+- LinkedIn: [linkedin.com/in/alanliangdev](https://www.linkedin.com/in/alanliangdev/)
+- GitHub: [github.com/alanliangdev](https://github.com/alanliangdev)
