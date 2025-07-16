@@ -10,7 +10,6 @@ theme:
   favicon: assets/favicon.svg
   icon:
     logo: material/lightbulb
-  custom_dir: docs/overrides
   palette:
     # Light mode
     - media: "(prefers-color-scheme: light)"
