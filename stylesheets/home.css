@@ -14,8 +14,8 @@
 /* Hero section */
 .hero {
   text-align: center;
-  padding: 4rem 1rem;
-  margin-bottom: 2rem;
+  padding: 6rem 1rem;
+  margin-bottom: 3rem;
   background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-primary-fg-color--dark));
   color: white;
   border-radius: 0.5rem;
@@ -98,10 +98,12 @@
 /* Work section */
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
   margin: 2rem 0;
   animation: fadeIn 0.8s ease-out 0.4s both;
+  max-width: 100%;
+  width: 100%;
 }
 
 .work-item {
@@ -193,20 +195,76 @@
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
+  .hero {
+    padding: 4rem 1rem;
+    margin-bottom: 2rem;
+  }
+  
   .hero h1 {
     font-size: 2rem;
   }
   
   .hero p {
     font-size: 1rem;
+    max-width: 100%;
+  }
+  
+  .about {
+    padding: 1.5rem;
   }
   
   .work-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .work-header {
+    padding: 1.25rem;
+    font-size: 1.25rem;
+  }
+  
+  .work-content {
+    padding: 1.25rem;
   }
   
   .contact-links {
     flex-direction: column;
     align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .contact-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Specific optimizations for modern smartphones like Google Pixel 9 Pro */
+@media screen and (max-width: 480px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+  
+  .skill-tag {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .work-title {
+    font-size: 1.1rem;
+  }
+  
+  .tech-tags {
+    gap: 0.4rem;
+  }
+  
+  .tech-tag {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
   }
 }
