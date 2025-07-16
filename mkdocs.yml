@@ -5,6 +5,8 @@ site_description: Staff Platform Engineer specializing in AWS, DevOps, and Kuber
 
 theme:
   name: material
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
   palette:
     # Light mode
     - media: "(prefers-color-scheme: light)"
@@ -49,6 +51,9 @@ plugins:
         - DevOps
         - Cloud
         - Platform Engineering
+        - Cost Optimization
+        - GitOps
+        - CI/CD
       categories_toc: true
       archive_toc: true
   - search
@@ -77,6 +82,9 @@ extra:
       link: https://github.com/alan-liang
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/alan-liang
+  
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Home: index.md

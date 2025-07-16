@@ -1,0 +1,78 @@
+/* Custom styles for the blog */
+
+/* Post title */
+.md-typeset h1 {
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+}
+
+/* Post metadata */
+.md-typeset .blog-post-metadata {
+  margin-bottom: 2rem;
+}
+
+/* Category pills */
+.md-tag {
+  padding: 0.3em 0.8em;
+  border-radius: 1em;
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  display: inline-block;
+  background-color: var(--md-primary-fg-color--light);
+  color: var(--md-primary-bg-color);
+}
+
+/* Code blocks */
+.md-typeset pre > code {
+  border-radius: 0.5rem;
+}
+
+/* Blog post cards */
+.md-typeset .grid.cards > ul > li {
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Author avatar */
+.md-author__avatar {
+  border-radius: 100%;
+  height: 3rem;
+  width: 3rem;
+}
+
+/* Improve readability */
+.md-typeset {
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 960px) {
+  .md-typeset {
+    font-size: 0.8rem;
+  }
+}
+
+/* Table styling */
+.md-typeset table:not([class]) {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color--light);
+  color: var(--md-primary-bg-color);
+}
+
+/* Blockquotes */
+.md-typeset blockquote {
+  border-left: 4px solid var(--md-primary-fg-color);
+  padding-left: 1rem;
+  color: var(--md-default-fg-color--light);
+}
