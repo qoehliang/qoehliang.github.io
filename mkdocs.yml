@@ -92,12 +92,13 @@ extra:
   
 extra_css:
   - stylesheets/extra.css
-  - stylesheets/garrison-style.css
+  - stylesheets/home.css
 
 extra_javascript:
   - assets/js/theme-toggle.js
 
 nav:
   - Home: index.md
+  - About: about.md
   - Blog: 
       - blog/index.md

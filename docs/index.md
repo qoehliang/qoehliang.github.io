@@ -4,11 +4,10 @@ hide:
   - toc
 ---
 
-<div class="profile-container">
+<div class="profile-section">
   <img src="assets/images/profile-photo.svg" alt="Alan Liang" class="profile-image">
   <h1 class="profile-name">Alan Liang</h1>
   <p class="profile-title">Staff Platform Engineer</p>
-  <p class="profile-bio">I architect and scale cloud infrastructure at Commonwealth Bank of Australia, specializing in AWS, DevOps, and Kubernetes solutions. I love solving complex distributed systems challenges and mentoring teams on cloud-native best practices.</p>
   
   <div class="social-links">
     <a href="mailto:alan.liang@example.com" class="social-link">
@@ -22,73 +21,74 @@ hide:
     </a>
   </div>
   
-  <div class="custom-nav">
-    <a href="#about" class="custom-nav-link active">About</a>
-    <a href="#projects" class="custom-nav-link">Projects</a>
-    <a href="blog/" class="custom-nav-link">Blog</a>
+  <div class="site-nav">
+    <a href="./" class="nav-link active">Blog</a>
+    <a href="about/" class="nav-link">About Me</a>
   </div>
 </div>
 
-<div class="section" id="about">
-  <h2 class="section-title">About Me</h2>
-  <p>I'm a passionate Staff Platform Engineer at Commonwealth Bank of Australia with extensive experience building and scaling cloud-native infrastructure. My expertise spans infrastructure as code, CI/CD pipelines, and container orchestration at enterprise scale.</p>
+<div class="blog-posts">
+  <div class="blog-post">
+    <h2 class="post-title"><a href="blog/posts/kubernetes-scaling/">Scaling Kubernetes at Enterprise Level</a></h2>
+    <div class="post-meta">
+      <span class="post-date">
+        <span class="twemoji">:material-calendar:</span> July 15, 2024
+      </span>
+    </div>
+    <div class="post-categories">
+      <a href="blog/category/kubernetes/" class="post-category">Kubernetes</a>
+      <a href="blog/category/platform-engineering/" class="post-category">Platform Engineering</a>
+      <a href="blog/category/devops/" class="post-category">DevOps</a>
+    </div>
+    <div class="post-excerpt">
+      <p>When you're managing Kubernetes infrastructure for 50+ development teams, you quickly learn that what works for a small startup doesn't scale to enterprise environments. Here are the key lessons I've learned from building and scaling our Kubernetes platform at Commonwealth Bank.</p>
+    </div>
+    <a href="blog/posts/kubernetes-scaling/" class="read-more">
+      Read more <span class="twemoji">:material-arrow-right:</span>
+    </a>
+  </div>
   
-  <div class="card-tags">
-    <span class="card-tag">AWS</span>
-    <span class="card-tag">Kubernetes</span>
-    <span class="card-tag">Docker</span>
-    <span class="card-tag">Terraform</span>
-    <span class="card-tag">Jenkins</span>
-    <span class="card-tag">Python</span>
-    <span class="card-tag">Go</span>
-    <span class="card-tag">GitOps</span>
+  <div class="blog-post">
+    <h2 class="post-title"><a href="blog/posts/aws-cost-optimization/">AWS Cost Optimization Strategies</a></h2>
+    <div class="post-meta">
+      <span class="post-date">
+        <span class="twemoji">:material-calendar:</span> July 8, 2024
+      </span>
+    </div>
+    <div class="post-categories">
+      <a href="blog/category/aws/" class="post-category">AWS</a>
+      <a href="blog/category/cost-optimization/" class="post-category">Cost Optimization</a>
+      <a href="blog/category/cloud/" class="post-category">Cloud</a>
+    </div>
+    <div class="post-excerpt">
+      <p>Cloud costs can spiral out of control quickly, especially in large organizations. Here's how we reduced our AWS bill by 40% without compromising performance or reliability.</p>
+    </div>
+    <a href="blog/posts/aws-cost-optimization/" class="read-more">
+      Read more <span class="twemoji">:material-arrow-right:</span>
+    </a>
+  </div>
+  
+  <div class="blog-post">
+    <h2 class="post-title"><a href="blog/posts/gitops-argocd/">GitOps with ArgoCD: Best Practices</a></h2>
+    <div class="post-meta">
+      <span class="post-date">
+        <span class="twemoji">:material-calendar:</span> July 1, 2024
+      </span>
+    </div>
+    <div class="post-categories">
+      <a href="blog/category/devops/" class="post-category">DevOps</a>
+      <a href="blog/category/gitops/" class="post-category">GitOps</a>
+      <a href="blog/category/ci-cd/" class="post-category">CI/CD</a>
+    </div>
+    <div class="post-excerpt">
+      <p>GitOps has transformed how we manage deployments at scale. Here's what we've learned implementing GitOps with ArgoCD across multiple environments and teams.</p>
+    </div>
+    <a href="blog/posts/gitops-argocd/" class="read-more">
+      Read more <span class="twemoji">:material-arrow-right:</span>
+    </a>
   </div>
 </div>
 
-<div class="section" id="projects">
-  <h2 class="section-title">Projects</h2>
-  <div class="card-grid">
-    <div class="card">
-      <div class="card-content">
-        <h3 class="card-title">Multi-Cloud Platform Migration</h3>
-        <p class="card-description">Led enterprise-scale migration of legacy systems to AWS, implementing microservices architecture with 99.9% uptime and 40% cost reduction.</p>
-        <div class="card-tags">
-          <span class="card-tag">AWS EKS</span>
-          <span class="card-tag">Terraform</span>
-          <span class="card-tag">Istio</span>
-          <span class="card-tag">ArgoCD</span>
-        </div>
-      </div>
-    </div>
-    
-    <div class="card">
-      <div class="card-content">
-        <h3 class="card-title">CI/CD Pipeline Optimization</h3>
-        <p class="card-description">Built automated deployment pipelines reducing deployment time from hours to minutes, with comprehensive testing and rollback capabilities.</p>
-        <div class="card-tags">
-          <span class="card-tag">Jenkins</span>
-          <span class="card-tag">GitLab CI</span>
-          <span class="card-tag">Docker</span>
-          <span class="card-tag">Helm</span>
-        </div>
-      </div>
-    </div>
-    
-    <div class="card">
-      <div class="card-content">
-        <h3 class="card-title">Kubernetes Platform Engineering</h3>
-        <p class="card-description">Designed and implemented self-service Kubernetes platform serving 50+ development teams with automated scaling and monitoring.</p>
-        <div class="card-tags">
-          <span class="card-tag">Kubernetes</span>
-          <span class="card-tag">Prometheus</span>
-          <span class="card-tag">Grafana</span>
-          <span class="card-tag">FluxCD</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="footer">
+<div class="site-footer">
   &copy; 2024 Alan Liang. All rights reserved.
 </div>
