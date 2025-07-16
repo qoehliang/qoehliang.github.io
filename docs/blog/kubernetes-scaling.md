@@ -83,7 +83,3 @@ After 18 months of operation:
 5. **Plan for failure** - Chaos engineering and disaster recovery are essential
 
 The journey to enterprise-scale Kubernetes isn't just about the technology - it's about building the right processes, tooling, and culture around it.
-
----
-
-*Have questions about scaling Kubernetes in your organization? Feel free to reach out - I'd love to discuss your specific challenges.*

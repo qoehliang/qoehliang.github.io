@@ -142,7 +142,3 @@ Monthly cost review meetings with:
 - **Custom dashboards**: Built with CloudWatch and Grafana
 
 Cost optimization isn't a one-time project - it's an ongoing discipline that requires the right tools, processes, and culture.
-
----
-
-*Want to discuss cost optimization strategies for your AWS environment? Let's connect!*
