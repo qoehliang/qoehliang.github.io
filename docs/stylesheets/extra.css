@@ -76,3 +76,15 @@
   padding-left: 1rem;
   color: var(--md-default-fg-color--light);
 }
+
+/* Custom footer logo */
+.md-footer-copyright::before {
+  content: "";
+  display: block;
+  background-image: url('../assets/images/footer-logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 60px;
+  margin-bottom: 10px;
+}
