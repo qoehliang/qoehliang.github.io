@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 <div class="hero">
   <h1>Alan Liang</h1>
   <p>Staff Platform Engineer specializing in AWS, DevOps, and Kubernetes solutions</p>
