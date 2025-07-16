@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <style>
+    /* Add any additional styles needed for the home page */
+  </style>
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  {% if page.url_path == "index.html" %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // This script will run only on the home page
+      console.log('Home page loaded');
+    });
+  </script>
+  {% endif %}
+{% endblock %}
