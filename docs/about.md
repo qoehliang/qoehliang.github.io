@@ -11,19 +11,14 @@ hide:
   
   <div class="social-links">
     <a href="mailto:alan.liang@example.com" class="social-link">
-      <span class="twemoji">:material-email:</span>
+      <i class="fas fa-envelope"></i>
     </a>
     <a href="https://www.linkedin.com/in/alanliangdev/" class="social-link">
-      <span class="twemoji">:fontawesome-brands-linkedin:</span>
+      <i class="fab fa-linkedin"></i>
     </a>
     <a href="https://github.com/alanliangdev" class="social-link">
-      <span class="twemoji">:fontawesome-brands-github:</span>
+      <i class="fab fa-github"></i>
     </a>
-  </div>
-  
-  <div class="site-nav">
-    <a href="../" class="nav-link">Blog</a>
-    <a href="./" class="nav-link active">About Me</a>
   </div>
 </div>
 

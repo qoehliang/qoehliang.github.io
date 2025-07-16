@@ -11,19 +11,14 @@ hide:
   
   <div class="social-links">
     <a href="mailto:alan.liang@example.com" class="social-link">
-      <span class="twemoji">:material-email:</span>
+      <i class="fas fa-envelope"></i>
     </a>
     <a href="https://www.linkedin.com/in/alanliangdev/" class="social-link">
-      <span class="twemoji">:fontawesome-brands-linkedin:</span>
+      <i class="fab fa-linkedin"></i>
     </a>
     <a href="https://github.com/alanliangdev" class="social-link">
-      <span class="twemoji">:fontawesome-brands-github:</span>
+      <i class="fab fa-github"></i>
     </a>
-  </div>
-  
-  <div class="site-nav">
-    <a href="./" class="nav-link active">Blog</a>
-    <a href="about/" class="nav-link">About Me</a>
   </div>
 </div>
 
@@ -32,7 +27,7 @@ hide:
     <h2 class="post-title"><a href="blog/posts/kubernetes-scaling/">Scaling Kubernetes at Enterprise Level</a></h2>
     <div class="post-meta">
       <span class="post-date">
-        <span class="twemoji">:material-calendar:</span> July 15, 2024
+        <i class="far fa-calendar-alt"></i> July 15, 2024
       </span>
     </div>
     <div class="post-categories">
@@ -44,7 +39,7 @@ hide:
       <p>When you're managing Kubernetes infrastructure for 50+ development teams, you quickly learn that what works for a small startup doesn't scale to enterprise environments. Here are the key lessons I've learned from building and scaling our Kubernetes platform at Commonwealth Bank.</p>
     </div>
     <a href="blog/posts/kubernetes-scaling/" class="read-more">
-      Read more <span class="twemoji">:material-arrow-right:</span>
+      Read more <i class="fas fa-arrow-right"></i>
     </a>
   </div>
   
@@ -52,7 +47,7 @@ hide:
     <h2 class="post-title"><a href="blog/posts/aws-cost-optimization/">AWS Cost Optimization Strategies</a></h2>
     <div class="post-meta">
       <span class="post-date">
-        <span class="twemoji">:material-calendar:</span> July 8, 2024
+        <i class="far fa-calendar-alt"></i> July 8, 2024
       </span>
     </div>
     <div class="post-categories">
@@ -64,7 +59,7 @@ hide:
       <p>Cloud costs can spiral out of control quickly, especially in large organizations. Here's how we reduced our AWS bill by 40% without compromising performance or reliability.</p>
     </div>
     <a href="blog/posts/aws-cost-optimization/" class="read-more">
-      Read more <span class="twemoji">:material-arrow-right:</span>
+      Read more <i class="fas fa-arrow-right"></i>
     </a>
   </div>
   
@@ -72,7 +67,7 @@ hide:
     <h2 class="post-title"><a href="blog/posts/gitops-argocd/">GitOps with ArgoCD: Best Practices</a></h2>
     <div class="post-meta">
       <span class="post-date">
-        <span class="twemoji">:material-calendar:</span> July 1, 2024
+        <i class="far fa-calendar-alt"></i> July 1, 2024
       </span>
     </div>
     <div class="post-categories">
@@ -84,7 +79,7 @@ hide:
       <p>GitOps has transformed how we manage deployments at scale. Here's what we've learned implementing GitOps with ArgoCD across multiple environments and teams.</p>
     </div>
     <a href="blog/posts/gitops-argocd/" class="read-more">
-      Read more <span class="twemoji">:material-arrow-right:</span>
+      Read more <i class="fas fa-arrow-right"></i>
     </a>
   </div>
 </div>
