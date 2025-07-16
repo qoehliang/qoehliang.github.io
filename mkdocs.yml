@@ -1,19 +1,57 @@
-site_name: Your Documentation
+site_name: Alan Liang
+site_url: https://qoehliang.github.io/
+site_author: Alan Liang
+site_description: Staff Platform Engineer specializing in AWS, DevOps, and Kubernetes solutions
+
 theme:
   name: material
   palette:
-    primary: indigo
-    accent: indigo
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   features:
     - navigation.tabs
     - navigation.sections
-    - toc.integrate
+    - navigation.path
     - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - toc.follow
     - search.suggest
     - search.highlight
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+
+plugins:
+  - blog:
+      blog_dir: blog
+      post_date_format: long
+      post_url_format: "{date}/{slug}"
+      post_readtime: true
+      post_readtime_words_per_minute: 265
+      categories_allowed:
+        - AWS
+        - Kubernetes
+        - DevOps
+        - Cloud
+        - Platform Engineering
+      categories_toc: true
+      archive_toc: true
+  - search
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -25,9 +63,22 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.tabbed:
       alternate_style: true
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/alan-liang
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/alan-liang
 
 nav:
   - Home: index.md
-  - Blog:
-    - AWS Cost Optimization: blog/aws-cost-optimization.md
-    - Kubernetes Scaling: blog/kubernetes-scaling.md
+  - Blog: 
+      - blog/index.md
