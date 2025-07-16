@@ -92,8 +92,7 @@ extra:
   
 extra_css:
   - stylesheets/extra.css
-  - stylesheets/home.css
-  - stylesheets/fullwidth.css
+  - stylesheets/garrison-style.css
 
 extra_javascript:
   - assets/js/theme-toggle.js
