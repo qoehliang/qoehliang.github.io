@@ -1,0 +1,65 @@
+{% extends "main.html" %}
+
+{% block content %}
+<div class="profile-section">
+  <img src="{{ config.site_url }}assets/images/profile-photo.svg" alt="Alan Liang" class="profile-image">
+  <h1 class="profile-name">Alan Liang</h1>
+  <p class="profile-title">Staff Platform Engineer</p>
+  
+  <div class="social-links">
+    <a href="mailto:alan.liang@example.com" class="social-link">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/alanliangdev/" class="social-link">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/alanliangdev" class="social-link">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+</div>
+
+<div class="blog-posts">
+  {% set blog_posts = [] %}
+  {% for page in nav.pages %}
+    {% if page.meta and page.meta.date %}
+      {% set _ = blog_posts.append(page) %}
+    {% endif %}
+  {% endfor %}
+  
+  {% set blog_posts = blog_posts|sort(attribute='meta.date', reverse=true) %}
+  {% set latest_posts = blog_posts[:3] %}
+  
+  {% for post in latest_posts %}
+    <div class="blog-post">
+      <h2 class="post-title"><a href="{{ post.url|url }}">{{ post.title }}</a></h2>
+      <div class="post-meta">
+        <span class="post-date">
+          <i class="far fa-calendar-alt"></i> {{ post.meta.date.strftime('%B %d, %Y') }}
+        </span>
+      </div>
+      {% if post.meta.categories %}
+      <div class="post-categories">
+        {% for category in post.meta.categories %}
+          <a href="{{ config.site_url }}blog/category/{{ category|lower|replace(' ', '-') }}/" class="post-category">{{ category }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+      <div class="post-excerpt">
+        {% if post.meta.excerpt %}
+          <p>{{ post.meta.excerpt }}</p>
+        {% else %}
+          <p>{{ post.content | striptags | truncate(200) }}</p>
+        {% endif %}
+      </div>
+      <a href="{{ post.url|url }}" class="read-more">
+        Read more <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  {% endfor %}
+</div>
+
+<div class="site-footer">
+  &copy; 2024 Alan Liang. All rights reserved.
+</div>
+{% endblock %}
