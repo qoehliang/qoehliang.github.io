@@ -14,6 +14,8 @@ authors:
   - alan
 readtime: 8
 comments: true
+image: assets/images/blog/gitops-argocd.svg
+description: Implementing GitOps workflows that scale across multiple environments and teams
 ---
 
 # GitOps with ArgoCD: Best Practices

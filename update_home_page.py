@@ -21,29 +21,6 @@ def extract_frontmatter(file_path):
             return {}
     return {}
 
-# Function to extract excerpt from markdown files
-def extract_excerpt(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
-        content = file.read()
-    
-    # Remove frontmatter
-    content = re.sub(r'^---\n.*?\n---', '', content, flags=re.DOTALL).strip()
-    
-    # Check for explicit excerpt marker
-    excerpt_match = re.search(r'<!-- more -->', content)
-    if excerpt_match:
-        excerpt = content[:excerpt_match.start()].strip()
-    else:
-        # Take first paragraph
-        paragraph_match = re.search(r'^# .*?\n\n(.*?)(\n\n|$)', content, re.DOTALL)
-        if paragraph_match:
-            excerpt = paragraph_match.group(1).strip()
-        else:
-            # Just take the first 200 characters
-            excerpt = content[:200].strip() + '...'
-    
-    return excerpt
-
 # Get all blog posts
 blog_posts = []
 for post_file in glob.glob('docs/blog/posts/*.md'):
@@ -59,35 +36,38 @@ for post_file in glob.glob('docs/blog/posts/*.md'):
         else:
             date = date_str
         
-        # Get categories
-        categories = frontmatter.get('categories', [])
-        
         # Get post title
         with open(post_file, 'r', encoding='utf-8') as file:
             content = file.read()
             title_match = re.search(r'^# (.*?)$', content, flags=re.MULTILINE)
             title = title_match.group(1) if title_match else os.path.basename(post_file).replace('.md', '')
         
-        # Get excerpt
-        excerpt = extract_excerpt(post_file)
-        
         # Get post URL
         post_url = 'blog/posts/' + os.path.basename(post_file).replace('.md', '/')
+        
+        # Get image path
+        image_path = frontmatter.get('image', '')
+        
+        # Get description
+        description = frontmatter.get('description', '')
+        
+        # Format date for display
+        display_date = date.strftime('%b %d, %y')
         
         blog_posts.append({
             'title': title,
             'date': date,
-            'date_str': date.strftime('%B %d, %Y'),
-            'categories': categories,
-            'excerpt': excerpt,
+            'display_date': display_date,
+            'image': image_path,
+            'description': description,
             'url': post_url
         })
 
 # Sort posts by date (newest first)
 blog_posts.sort(key=lambda x: x['date'], reverse=True)
 
-# Take the latest 3 posts
-latest_posts = blog_posts[:3]
+# Take the latest 6 posts (or all if less than 6)
+latest_posts = blog_posts[:6]
 
 # Generate the home page content
 home_page_content = """---
@@ -114,34 +94,22 @@ hide:
   </div>
 </div>
 
-<div class="blog-posts">
+<div class="blog-grid">
 """
 
-# Add each post to the home page
+# Add each post to the home page in a card format
 for post in latest_posts:
-    home_page_content += f"""  <div class="blog-post">
-    <h2 class="post-title"><a href="{post['url']}">{post['title']}</a></h2>
-    <div class="post-meta">
-      <span class="post-date">
-        <i class="far fa-calendar-alt"></i> {post['date_str']}
-      </span>
-    </div>
-    <div class="post-categories">
-"""
-    
-    for category in post['categories']:
-        category_url = f"blog/category/{category.lower().replace(' ', '-')}/"
-        home_page_content += f'      <a href="{category_url}" class="post-category">{category}</a>\n'
-    
-    home_page_content += f"""    </div>
-    <div class="post-excerpt">
-      <p>{post['excerpt']}</p>
-    </div>
-    <a href="{post['url']}" class="read-more">
-      Read more <i class="fas fa-arrow-right"></i>
+    home_page_content += f"""  <div class="blog-card">
+    <a href="{post['url']}" class="blog-card-link">
+      <div class="blog-card-image" style="background-image: url('{post['image']}')">
+        <div class="blog-card-date">{post['display_date']}</div>
+      </div>
+      <div class="blog-card-content">
+        <h2 class="blog-card-title">{post['title']}</h2>
+        <p class="blog-card-description">{post['description']}</p>
+      </div>
     </a>
   </div>
-  
 """
 
 home_page_content += """</div>
@@ -154,4 +122,4 @@ home_page_content += """</div>
 with open('docs/index.md', 'w', encoding='utf-8') as file:
     file.write(home_page_content)
 
-print("Home page updated with the latest blog posts!")
+print("Home page updated with the latest blog posts in card format!")
