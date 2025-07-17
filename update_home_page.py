@@ -42,8 +42,9 @@ for post_file in glob.glob('docs/blog/posts/*.md'):
             title_match = re.search(r'^# (.*?)$', content, flags=re.MULTILINE)
             title = title_match.group(1) if title_match else os.path.basename(post_file).replace('.md', '')
         
-        # Get post URL
-        post_url = f"blog/{date.strftime('%Y/%m/%d')}/{os.path.basename(post_file).replace('.md', '')}"
+        # Get post URL based on title (slug)
+        slug = title.lower().replace(' ', '-').replace(':', '').replace('?', '').replace('!', '').replace('.', '').replace(',', '')
+        post_url = f"blog/{date.strftime('%Y/%m/%d')}/{slug}/"
         
         # Get image path
         image_path = frontmatter.get('image', f"assets/images/blog/{os.path.basename(post_file).replace('.md', '')}.svg")
