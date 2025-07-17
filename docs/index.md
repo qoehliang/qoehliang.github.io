@@ -22,64 +22,40 @@ hide:
   </div>
 </div>
 
-<div class="blog-posts">
-  <div class="blog-post">
-    <h2 class="post-title"><a href="blog/posts/kubernetes-scaling/">Scaling Kubernetes at Enterprise Level</a></h2>
-    <div class="post-meta">
-      <span class="post-date">
-        <i class="far fa-calendar-alt"></i> July 15, 2024
-      </span>
-    </div>
-    <div class="post-categories">
-      <a href="blog/category/kubernetes/" class="post-category">Kubernetes</a>
-      <a href="blog/category/platform-engineering/" class="post-category">Platform Engineering</a>
-      <a href="blog/category/devops/" class="post-category">DevOps</a>
-    </div>
-    <div class="post-excerpt">
-      <p>When you're managing Kubernetes infrastructure for 50+ development teams, you quickly learn that what works for a small startup doesn't scale to enterprise environments. Here are the key lessons I've learned from building and scaling our Kubernetes platform at Commonwealth Bank.</p>
-    </div>
-    <a href="blog/posts/kubernetes-scaling/" class="read-more">
-      Read more <i class="fas fa-arrow-right"></i>
+<div class="blog-grid">
+  <div class="blog-card">
+    <a href="blog/2024/07/15/kubernetes-scaling/" class="blog-card-link">
+      <div class="blog-card-image" style="background-image: url('assets/images/blog/kubernetes-scaling.svg')">
+        <div class="blog-card-date">Jul 15, 24</div>
+      </div>
+      <div class="blog-card-content">
+        <h2 class="blog-card-title">Scaling Kubernetes at Enterprise Level</h2>
+        <p class="blog-card-description">Taking enterprise Kubernetes from complex to manageable with proper governance and automation</p>
+      </div>
     </a>
   </div>
   
-  <div class="blog-post">
-    <h2 class="post-title"><a href="blog/posts/aws-cost-optimization/">AWS Cost Optimization Strategies</a></h2>
-    <div class="post-meta">
-      <span class="post-date">
-        <i class="far fa-calendar-alt"></i> July 8, 2024
-      </span>
-    </div>
-    <div class="post-categories">
-      <a href="blog/category/aws/" class="post-category">AWS</a>
-      <a href="blog/category/cost-optimization/" class="post-category">Cost Optimization</a>
-      <a href="blog/category/cloud/" class="post-category">Cloud</a>
-    </div>
-    <div class="post-excerpt">
-      <p>Cloud costs can spiral out of control quickly, especially in large organizations. Here's how we reduced our AWS bill by 40% without compromising performance or reliability.</p>
-    </div>
-    <a href="blog/posts/aws-cost-optimization/" class="read-more">
-      Read more <i class="fas fa-arrow-right"></i>
+  <div class="blog-card">
+    <a href="blog/2024/07/08/aws-cost-optimization/" class="blog-card-link">
+      <div class="blog-card-image" style="background-image: url('assets/images/blog/aws-cost-optimization.svg')">
+        <div class="blog-card-date">Jul 8, 24</div>
+      </div>
+      <div class="blog-card-content">
+        <h2 class="blog-card-title">AWS Cost Optimization Strategies</h2>
+        <p class="blog-card-description">How we reduced our AWS bill by 40% without compromising performance or reliability</p>
+      </div>
     </a>
   </div>
   
-  <div class="blog-post">
-    <h2 class="post-title"><a href="blog/posts/gitops-argocd/">GitOps with ArgoCD: Best Practices</a></h2>
-    <div class="post-meta">
-      <span class="post-date">
-        <i class="far fa-calendar-alt"></i> July 1, 2024
-      </span>
-    </div>
-    <div class="post-categories">
-      <a href="blog/category/devops/" class="post-category">DevOps</a>
-      <a href="blog/category/gitops/" class="post-category">GitOps</a>
-      <a href="blog/category/ci-cd/" class="post-category">CI/CD</a>
-    </div>
-    <div class="post-excerpt">
-      <p>GitOps has transformed how we manage deployments at scale. Here's what we've learned implementing GitOps with ArgoCD across multiple environments and teams.</p>
-    </div>
-    <a href="blog/posts/gitops-argocd/" class="read-more">
-      Read more <i class="fas fa-arrow-right"></i>
+  <div class="blog-card">
+    <a href="blog/2024/07/01/gitops-argocd/" class="blog-card-link">
+      <div class="blog-card-image" style="background-image: url('assets/images/blog/gitops-argocd.svg')">
+        <div class="blog-card-date">Jul 1, 24</div>
+      </div>
+      <div class="blog-card-content">
+        <h2 class="blog-card-title">GitOps with ArgoCD: Best Practices</h2>
+        <p class="blog-card-description">Implementing GitOps workflows that scale across multiple environments and teams</p>
+      </div>
     </a>
   </div>
 </div>

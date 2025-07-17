@@ -43,10 +43,10 @@ for post_file in glob.glob('docs/blog/posts/*.md'):
             title = title_match.group(1) if title_match else os.path.basename(post_file).replace('.md', '')
         
         # Get post URL
-        post_url = 'blog/posts/' + os.path.basename(post_file).replace('.md', '/')
+        post_url = f"blog/{date.strftime('%Y/%m/%d')}/{os.path.basename(post_file).replace('.md', '')}"
         
         # Get image path
-        image_path = frontmatter.get('image', '')
+        image_path = frontmatter.get('image', f"assets/images/blog/{os.path.basename(post_file).replace('.md', '')}.svg")
         
         # Get description
         description = frontmatter.get('description', '')
@@ -66,8 +66,8 @@ for post_file in glob.glob('docs/blog/posts/*.md'):
 # Sort posts by date (newest first)
 blog_posts.sort(key=lambda x: x['date'], reverse=True)
 
-# Take the latest 6 posts (or all if less than 6)
-latest_posts = blog_posts[:6]
+# Take the latest 3 posts (or all if less than 3)
+latest_posts = blog_posts[:3]
 
 # Generate the home page content
 home_page_content = """---
@@ -110,6 +110,7 @@ for post in latest_posts:
       </div>
     </a>
   </div>
+  
 """
 
 home_page_content += """</div>
