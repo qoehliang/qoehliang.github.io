@@ -24,7 +24,7 @@ hide:
 
 <div class="blog-grid">
   <div class="blog-card">
-    <a href="blog/2024/07/15/kubernetes-scaling/" class="blog-card-link">
+    <a href="blog/2024/07/15/scaling-kubernetes-at-enterprise-level/" class="blog-card-link">
       <div class="blog-card-image" style="background-image: url('assets/images/blog/kubernetes-scaling.svg')">
         <div class="blog-card-date">Jul 15, 24</div>
       </div>
@@ -36,7 +36,7 @@ hide:
   </div>
   
   <div class="blog-card">
-    <a href="blog/2024/07/08/aws-cost-optimization/" class="blog-card-link">
+    <a href="blog/2024/07/08/aws-cost-optimization-strategies/" class="blog-card-link">
       <div class="blog-card-image" style="background-image: url('assets/images/blog/aws-cost-optimization.svg')">
         <div class="blog-card-date">Jul 8, 24</div>
       </div>
@@ -48,7 +48,7 @@ hide:
   </div>
   
   <div class="blog-card">
-    <a href="blog/2024/07/01/gitops-argocd/" class="blog-card-link">
+    <a href="blog/2024/07/01/gitops-with-argocd-best-practices/" class="blog-card-link">
       <div class="blog-card-image" style="background-image: url('assets/images/blog/gitops-argocd.svg')">
         <div class="blog-card-date">Jul 1, 24</div>
       </div>
