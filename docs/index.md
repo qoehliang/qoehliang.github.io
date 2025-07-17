@@ -10,26 +10,34 @@ Any changes made directly to this file will be overwritten.
 -->
 
 <div class="profile-section">
-  <img src="assets/images/profile-photo.svg" alt="Alan Liang" class="profile-image">
-  <h1 class="profile-name">Alan Liang</h1>
-  <p class="profile-title">Staff Platform Engineer</p>
+  <div class="profile-image-container">
+    <img src="assets/images/profile-photo.svg" alt="Alan Liang" class="profile-image">
+  </div>
   
-  <div class="social-links">
-    <a href="mailto:alan.liang@example.com" class="social-link">
-      <i class="fas fa-envelope"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/alanliangdev/" class="social-link">
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="https://github.com/alanliangdev" class="social-link">
-      <i class="fab fa-github"></i>
-    </a>
+  <div class="profile-content">
+    <h1 class="profile-name">Hi, I'm Alan Liang.</h1>
+    <p class="profile-bio">I architect and scale cloud infrastructure at Commonwealth Bank of Australia, specializing in AWS, DevOps, and Kubernetes solutions. I love solving complex distributed systems challenges and mentoring teams on cloud-native best practices.</p>
+    
+    <div class="social-links">
+      <a href="mailto:alan.liang@example.com" class="social-link" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/alanliangdev/" class="social-link" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/alanliangdev" class="social-link" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
   </div>
 </div>
 
-<!-- Blog grid will be populated by update_home_page.py -->
-<div class="blog-grid">
-  <!-- Latest blog posts will appear here -->
+<div class="blog-section">
+  <h2 class="blog-section-title">Latest Posts</h2>
+  
+  <div class="blog-posts">
+    <!-- Blog posts will be populated by update_home_page.py -->
+  </div>
 </div>
 
 <div class="site-footer">
