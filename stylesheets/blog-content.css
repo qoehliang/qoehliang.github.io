@@ -7,6 +7,54 @@
   padding: 0 1.5rem;
 }
 
+/* Blog post list styling for the blog section */
+.md-content article ul.mdx-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.md-content article ul.mdx-posts li {
+  background-color: var(--md-default-bg-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.md-content article ul.mdx-posts li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.md-content article ul.mdx-posts li article {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.md-content article ul.mdx-posts li article a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 1.25rem;
+}
+
+.md-content article ul.mdx-posts li article h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.75rem 0;
+}
+
+.md-content article ul.mdx-posts li article time {
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
 /* Keep the profile section full width */
 .profile-section {
   width: 100%;
