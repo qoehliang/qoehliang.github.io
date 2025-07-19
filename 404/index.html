@@ -22,7 +22,7 @@
     
     
       
-        <title>404 - Page not found - Alan Liang</title>
+        <title>404 - Alan Liang</title>
       
     
     
@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../stylesheets/justin-style.css">
     
+      <link rel="stylesheet" href="../stylesheets/custom-header.css">
+    
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -59,6 +61,24 @@
     
     
     
+
+<style>
+  /* Hide the default Material header */
+  .md-header {
+    display: none !important;
+  }
+  
+  /* Hide the default tabs */
+  .md-tabs {
+    display: none !important;
+  }
+  
+  /* Add padding to account for fixed header */
+  .md-main {
+    padding-top: 64px;
+  }
+</style>
+
   </head>
   
   
@@ -78,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#404-page-not-found" class="md-skip">
+        <a href="#template-404html" class="md-skip">
           Skip to content
         </a>
       
@@ -88,6 +108,21 @@
     </div>
     
     
+<header class="custom-header">
+  <div class="custom-header-container">
+    <div class="custom-header-logo">
+      <a href="https://qoehliang.github.io/">
+        Alan Liang
+      </a>
+    </div>
+    <div class="custom-header-spacer"></div>
+    <nav class="custom-header-nav">
+      <a href="../blog/" class="custom-header-nav-link">Blog</a>
+      <a href="../about/" class="custom-header-nav-link">About</a>
+    </nav>
+  </div>
+</header>
+
       
 
   
@@ -113,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              404 - Page not found
+              404
             
           </span>
         </div>
@@ -198,6 +233,7 @@
   
 </header>
     
+
     <div class="md-container" data-md-component="container">
       
       
@@ -314,8 +350,23 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#template-404html" class="md-nav__link">
+    <span class="md-ellipsis">
+      template: 404.html
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -331,9 +382,10 @@
 
 
 
-<h1 id="404-page-not-found">404 - Page not found</h1>
-<p>Sorry, the page you're looking for doesn't exist.</p>
-<p><a href="./">Return to Home</a></p>
+  <h1>404</h1>
+
+<hr />
+<h2 id="template-404html">template: 404.html</h2>
 
 
 

@@ -48,6 +48,8 @@
     
       <link rel="stylesheet" href="/stylesheets/justin-style.css">
     
+      <link rel="stylesheet" href="/stylesheets/custom-header.css">
+    
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -57,6 +59,24 @@
     
     
     
+
+<style>
+  /* Hide the default Material header */
+  .md-header {
+    display: none !important;
+  }
+  
+  /* Hide the default tabs */
+  .md-tabs {
+    display: none !important;
+  }
+  
+  /* Add padding to account for fixed header */
+  .md-main {
+    padding-top: 64px;
+  }
+</style>
+
   </head>
   
   
@@ -81,6 +101,21 @@
     </div>
     
     
+<header class="custom-header">
+  <div class="custom-header-container">
+    <div class="custom-header-logo">
+      <a href="https://qoehliang.github.io/">
+        Alan Liang
+      </a>
+    </div>
+    <div class="custom-header-spacer"></div>
+    <nav class="custom-header-nav">
+      <a href="/blog/" class="custom-header-nav-link">Blog</a>
+      <a href="/about/" class="custom-header-nav-link">About</a>
+    </nav>
+  </div>
+</header>
+
       
 
   
@@ -191,6 +226,7 @@
   
 </header>
     
+
     <div class="md-container" data-md-component="container">
       
       
@@ -318,7 +354,13 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+<div class="main-content">
+  <div class="error-container">
+    <h1>404 - Page Not Found</h1>
+    <p>The page you're looking for doesn't exist.</p>
+    <a href="https://qoehliang.github.io/">Go back to home</a>
+  </div>
+</div>
 
               </article>
             </div>

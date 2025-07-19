@@ -1,0 +1,72 @@
+/* Custom standalone header */
+.custom-header {
+  background-color: #121e2d;
+  color: rgba(255, 255, 255, 0.87);
+  padding: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.custom-header-logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.custom-header-logo a {
+  color: rgba(255, 255, 255, 0.87);
+  text-decoration: none;
+}
+
+.custom-header-spacer {
+  flex-grow: 1;
+}
+
+.custom-header-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.custom-header-nav-link {
+  color: rgba(255, 255, 255, 0.87);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.custom-header-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Add padding to the top of the content to account for the fixed header */
+.md-main {
+  padding-top: 64px;
+}
+
+/* Hide the default Material header */
+.md-header {
+  display: none !important;
+}
+
+/* Hide the default tabs */
+.md-tabs {
+  display: none !important;
+}
