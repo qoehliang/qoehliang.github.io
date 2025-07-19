@@ -1,4 +1,4 @@
-# Alan Liang's Personal Site
+# Alan Liang's Website
 
 This is my personal website built with Material for MkDocs and hosted on GitHub Pages.
 
