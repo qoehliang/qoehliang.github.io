@@ -1,26 +1,39 @@
 {% extends "base.html" %}
 
 {% block header %}
-  {% include "partials/header.html" %}
-  {{ super() }}
+<header class="custom-header">
+  <div class="custom-header-container">
+    <div class="custom-header-logo">
+      <a href="{{ config.site_url | default(nav.homepage.url, true) | url }}">
+        {{ config.site_name }}
+      </a>
+    </div>
+    <div class="custom-header-spacer"></div>
+    <nav class="custom-header-nav">
+      <a href="{{ 'blog/' | url }}" class="custom-header-nav-link">Blog</a>
+      <a href="{{ 'about/' | url }}" class="custom-header-nav-link">About</a>
+    </nav>
+  </div>
+</header>
+{{ super() }}
 {% endblock %}
 
 {% block extrahead %}
-  {{ super() }}
-  <style>
-    /* Add padding to the top of the content to account for the fixed header */
-    .md-main {
-      padding-top: 64px;
-    }
-    
-    /* Hide the default Material header */
-    .md-header {
-      display: none !important;
-    }
-    
-    /* Hide the default tabs */
-    .md-tabs {
-      display: none !important;
-    }
-  </style>
+{{ super() }}
+<style>
+  /* Hide the default Material header */
+  .md-header {
+    display: none !important;
+  }
+  
+  /* Hide the default tabs */
+  .md-tabs {
+    display: none !important;
+  }
+  
+  /* Add padding to account for fixed header */
+  .md-main {
+    padding-top: 64px;
+  }
+</style>
 {% endblock %}
