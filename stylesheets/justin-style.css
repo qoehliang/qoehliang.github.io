@@ -306,3 +306,80 @@ Remove the tabs bar completely */
   color: var(--dark-text) !important;
   box-shadow: none !important;
 }
+
+/* Make sure navigation links are visible */
+.md-header-nav__link {
+  color: var(--dark-text) !important;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.md-header-nav__link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Fix header spacing */
+.md-header__inner {
+  padding: 0.8rem 1.5rem !important;
+  max-width: 100% !important;
+}/* For
+ce header to be visible */
+.md-header {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure header nav is visible */
+.md-header__nav {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Fix for About page */
+.blog-posts h2, .blog-posts h3, .blog-posts h4 {
+  color: var(--dark-text);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.blog-posts p {
+  color: var(--dark-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.blog-posts ul {
+  color: var(--dark-text-secondary);
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.blog-posts li {
+  margin-bottom: 0.5rem;
+}
+
+.post-meta {
+  color: var(--dark-text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.post-category {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--dark-text);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+}
