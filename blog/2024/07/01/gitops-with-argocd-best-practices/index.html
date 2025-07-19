@@ -111,6 +111,240 @@
   .md-tabs {
     display: none !important;
   }
+
+  /* Hide sidebars */
+  .md-sidebar--primary,
+  .md-sidebar--secondary {
+    display: none !important;
+  }
+
+  /* Full width content */
+  .md-main__inner {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .md-content__inner {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Hero section */
+  .hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .hero-content {
+    max-width: 500px;
+    margin-right: 3rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: rgba(255, 255, 255, 0.87);
+  }
+
+  .hero-bio {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 1rem;
+  }
+
+  .hero-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Social links */
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .social-link {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.2rem;
+    transition: color 0.2s ease;
+  }
+
+  .social-link:hover {
+    color: rgba(255, 255, 255, 0.87);
+  }
+
+  /* Email subscription */
+  .email-subscribe {
+    background-color: rgba(59, 130, 246, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    max-width: 300px;
+  }
+
+  .email-subscribe h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    color: rgba(255, 255, 255, 0.87);
+    font-weight: 500;
+  }
+
+  .email-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .email-input {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    background-color: white;
+    font-size: 0.9rem;
+  }
+
+  .email-button {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 0.9rem;
+  }
+
+  .email-button:hover {
+    background-color: #2563eb;
+  }
+
+  /* Blog grid */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1rem 2rem 2rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Blog card */
+  .blog-card {
+    background-color: transparent;
+    border-radius: 0;
+    overflow: hidden;
+  }
+
+  .blog-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .blog-card-image {
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+
+  .blog-card-date {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+    border-radius: 4px;
+  }
+
+  .blog-card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: rgba(255, 255, 255, 0.87);
+  }
+
+  .blog-card-description {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.4;
+  }
+
+  /* Footer */
+  .site-footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  /* Responsive adjustments */
+  @media screen and (max-width: 900px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    
+    .hero-content {
+      margin-right: 0;
+      margin-bottom: 2rem;
+      max-width: 100%;
+    }
+    
+    .hero-image {
+      margin-top: 2rem;
+    }
+    
+    .social-links {
+      justify-content: center;
+    }
+    
+    .email-subscribe {
+      margin: 1.5rem auto 0;
+    }
+    
+    .blog-grid {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .hero-title {
+      font-size: 2rem;
+    }
+  }
 </style>
 
   </head>
@@ -248,7 +482,7 @@
   
   
   <span class="md-ellipsis">
-    Tech Blog
+    Blog
     
   </span>
   
@@ -296,28 +530,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#our-gitops-architecture" class="md-nav__link">
+  <a href="#our-argocd-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Our GitOps Architecture
+      Our ArgoCD Setup
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Our GitOps Architecture">
+    <nav class="md-nav" aria-label="Our ArgoCD Setup">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#repository-structure" class="md-nav__link">
+  <a href="#application-of-applications-pattern" class="md-nav__link">
     <span class="md-ellipsis">
-      Repository Structure
+      Application of Applications Pattern
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#argocd-application-structure" class="md-nav__link">
+  <a href="#multi-environment-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      ArgoCD Application Structure
+      Multi-Environment Strategy
     </span>
   </a>
   
@@ -329,102 +563,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-best-practices" class="md-nav__link">
+  <a href="#security-considerations" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Best Practices
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Key Best Practices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-environment-promotion-strategy" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Environment Promotion Strategy
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-secret-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Secret Management
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-application-of-applications-pattern" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Application of Applications Pattern
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#results-and-benefits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Results and Benefits
+      Security Considerations
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#challenges-and-solutions" class="md-nav__link">
+  <a href="#results" class="md-nav__link">
     <span class="md-ellipsis">
-      Challenges and Solutions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Challenges and Solutions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#challenge-managing-secrets" class="md-nav__link">
-    <span class="md-ellipsis">
-      Challenge: Managing Secrets
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#challenge-scaling-to-multiple-teams" class="md-nav__link">
-    <span class="md-ellipsis">
-      Challenge: Scaling to Multiple Teams
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#challenge-progressive-delivery" class="md-nav__link">
-    <span class="md-ellipsis">
-      Challenge: Progressive Delivery
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
+      Results
     </span>
   </a>
   
@@ -497,8 +647,8 @@
                           <span class="md-ellipsis">
                             in
                             
-                              <a href="../../../../category/devops/">DevOps</a>, 
                               <a href="../../../../category/gitops/">GitOps</a>, 
+                              <a href="../../../../category/argocd/">ArgoCD</a>, 
                               <a href="../../../../category/cicd/">CI/CD</a></span>
                         </div>
                       </li>
@@ -510,7 +660,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              8 min read
+                              12 min read
                             
                           </span>
                         </div>
@@ -535,121 +685,59 @@
 
 
 <h1 id="gitops-with-argocd-best-practices">GitOps with ArgoCD: Best Practices</h1>
-<p>GitOps has transformed how we manage deployments at scale. Here's what we've learned implementing GitOps with ArgoCD across multiple environments and teams.</p>
+<p>Implementing GitOps at scale requires careful planning and the right tooling. Here's how we built a GitOps platform that serves 50+ development teams.</p>
 <!-- more -->
 
 <h2 id="why-gitops">Why GitOps?</h2>
-<p>Traditional deployment methods often suffer from:
-- <strong>Configuration drift</strong> between environments
-- <strong>Lack of audit trails</strong> for changes
-- <strong>Manual deployment processes</strong> that don't scale
-- <strong>Inconsistent rollback procedures</strong></p>
-<p>GitOps solves these problems by making Git the single source of truth for your infrastructure and applications.</p>
-<h2 id="our-gitops-architecture">Our GitOps Architecture</h2>
-<h3 id="repository-structure">Repository Structure</h3>
-<p>We use a <strong>multi-repo approach</strong> with clear separation of concerns:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>├── application-repos/
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│   ├── service-a/
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│   ├── service-b/
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│   └── service-c/
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>└── gitops-repos/
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    ├── dev/
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    ├── staging/
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    └── production/
-</code></pre></div>
-<h3 id="argocd-application-structure">ArgoCD Application Structure</h3>
-<p>Each application follows a consistent pattern:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Application</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">metadata</span><span class="p">:</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service-a</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argocd</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nt">spec</span><span class="p">:</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">project</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nt">source</span><span class="p">:</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="nt">repoURL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/org/gitops-repo.git</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nt">targetRevision</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HEAD</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production/service-a</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span><span class="nt">destination</span><span class="p">:</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="nt">server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://kubernetes.default.svc</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service-a</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">  </span><span class="nt">syncPolicy</span><span class="p">:</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="nt">automated</span><span class="p">:</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">      </span><span class="nt">prune</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">      </span><span class="nt">selfHeal</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="nt">syncOptions</span><span class="p">:</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CreateNamespace=true</span>
-</code></pre></div>
-<h2 id="key-best-practices">Key Best Practices</h2>
-<h3 id="1-environment-promotion-strategy">1. Environment Promotion Strategy</h3>
-<p>We use <strong>branch-based promotion</strong>:</p>
+<p>GitOps provides:</p>
 <ul>
-<li><code>main</code> branch → Production</li>
-<li><code>staging</code> branch → Staging  </li>
-<li><code>develop</code> branch → Development</li>
+<li><strong>Declarative deployments</strong></li>
+<li><strong>Version control for infrastructure</strong></li>
+<li><strong>Automated rollbacks</strong></li>
+<li><strong>Audit trails</strong></li>
 </ul>
-<h3 id="2-secret-management">2. Secret Management</h3>
-<p>Never store secrets in Git. We use <strong>External Secrets Operator</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ExternalSecret</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">metadata</span><span class="p">:</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">database-credentials</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nt">spec</span><span class="p">:</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="nt">refreshInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="nt">secretStoreRef</span><span class="p">:</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aws-secretsmanager</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterSecretStore</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="nt">target</span><span class="p">:</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">database-credentials</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">  </span><span class="nt">data</span><span class="p">:</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">username</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="nt">remoteRef</span><span class="p">:</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prod/db/credentials</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">      </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">username</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="nt">remoteRef</span><span class="p">:</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prod/db/credentials</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">      </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
+<h2 id="our-argocd-setup">Our ArgoCD Setup</h2>
+<h3 id="application-of-applications-pattern">Application of Applications Pattern</h3>
+<p>We use the "app of apps" pattern to manage multiple applications:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Application</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">metadata</span><span class="p">:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">team-applications</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argocd</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nt">spec</span><span class="p">:</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">project</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nt">source</span><span class="p">:</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">repoURL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/company/gitops-apps</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nt">targetRevision</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HEAD</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">teams/</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nt">destination</span><span class="p">:</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="nt">server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://kubernetes.default.svc</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="nt">syncPolicy</span><span class="p">:</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="nt">automated</span><span class="p">:</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">      </span><span class="nt">prune</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">      </span><span class="nt">selfHeal</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
-<h3 id="3-application-of-applications-pattern">3. Application of Applications Pattern</h3>
-<p>We use ArgoCD's <strong>App of Apps</strong> pattern for managing multiple applications:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Application</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nt">metadata</span><span class="p">:</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all-apps</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argocd</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nt">spec</span><span class="p">:</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nt">project</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="nt">source</span><span class="p">:</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="nt">repoURL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/org/gitops-repo.git</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="nt">targetRevision</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HEAD</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span><span class="nt">destination</span><span class="p">:</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="nt">server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://kubernetes.default.svc</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argocd</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">  </span><span class="nt">syncPolicy</span><span class="p">:</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="nt">automated</span><span class="p">:</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">      </span><span class="nt">prune</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">      </span><span class="nt">selfHeal</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</code></pre></div>
-<h2 id="results-and-benefits">Results and Benefits</h2>
-<p>After 12 months of GitOps with ArgoCD:</p>
+<h3 id="multi-environment-strategy">Multi-Environment Strategy</h3>
+<ul>
+<li><strong>Development</strong>: Auto-sync enabled</li>
+<li><strong>Staging</strong>: Manual sync with approval</li>
+<li><strong>Production</strong>: Manual sync with multiple approvals</li>
+</ul>
+<h2 id="security-considerations">Security Considerations</h2>
+<ol>
+<li><strong>RBAC</strong>: Team-specific access controls</li>
+<li><strong>Secret management</strong>: External Secrets Operator</li>
+<li><strong>Image scanning</strong>: Integrated with Harbor registry</li>
+<li><strong>Policy enforcement</strong>: Open Policy Agent</li>
+</ol>
+<h2 id="results">Results</h2>
 <ul>
 <li><strong>99.5%</strong> deployment success rate</li>
-<li><strong>75%</strong> reduction in deployment time</li>
+<li><strong>5 minute</strong> average deployment time</li>
 <li><strong>Zero</strong> configuration drift incidents</li>
-<li><strong>100%</strong> audit trail coverage</li>
-<li><strong>50%</strong> reduction in rollback time</li>
+<li><strong>100%</strong> audit compliance</li>
 </ul>
-<h2 id="challenges-and-solutions">Challenges and Solutions</h2>
-<h3 id="challenge-managing-secrets">Challenge: Managing Secrets</h3>
-<p><strong>Solution</strong>: External Secrets Operator + AWS Secrets Manager</p>
-<h3 id="challenge-scaling-to-multiple-teams">Challenge: Scaling to Multiple Teams</h3>
-<p><strong>Solution</strong>: ArgoCD Projects with RBAC</p>
-<h3 id="challenge-progressive-delivery">Challenge: Progressive Delivery</h3>
-<p><strong>Solution</strong>: Argo Rollouts for canary deployments</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>GitOps with ArgoCD has transformed our deployment process, making it more reliable, auditable, and scalable. The key is to start with a solid foundation of best practices and continuously refine your approach as you scale.</p>
+<p>GitOps isn't just about tools - it's about establishing reliable, repeatable processes that scale with your organization.</p>
 
 
 

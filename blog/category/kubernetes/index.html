@@ -109,6 +109,240 @@
   .md-tabs {
     display: none !important;
   }
+
+  /* Hide sidebars */
+  .md-sidebar--primary,
+  .md-sidebar--secondary {
+    display: none !important;
+  }
+
+  /* Full width content */
+  .md-main__inner {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .md-content__inner {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Hero section */
+  .hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .hero-content {
+    max-width: 500px;
+    margin-right: 3rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: rgba(255, 255, 255, 0.87);
+  }
+
+  .hero-bio {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 1rem;
+  }
+
+  .hero-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Social links */
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .social-link {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.2rem;
+    transition: color 0.2s ease;
+  }
+
+  .social-link:hover {
+    color: rgba(255, 255, 255, 0.87);
+  }
+
+  /* Email subscription */
+  .email-subscribe {
+    background-color: rgba(59, 130, 246, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    max-width: 300px;
+  }
+
+  .email-subscribe h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    color: rgba(255, 255, 255, 0.87);
+    font-weight: 500;
+  }
+
+  .email-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .email-input {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    background-color: white;
+    font-size: 0.9rem;
+  }
+
+  .email-button {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 0.9rem;
+  }
+
+  .email-button:hover {
+    background-color: #2563eb;
+  }
+
+  /* Blog grid */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1rem 2rem 2rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Blog card */
+  .blog-card {
+    background-color: transparent;
+    border-radius: 0;
+    overflow: hidden;
+  }
+
+  .blog-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .blog-card-image {
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+
+  .blog-card-date {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+    border-radius: 4px;
+  }
+
+  .blog-card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: rgba(255, 255, 255, 0.87);
+  }
+
+  .blog-card-description {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.4;
+  }
+
+  /* Footer */
+  .site-footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  /* Responsive adjustments */
+  @media screen and (max-width: 900px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    
+    .hero-content {
+      margin-right: 0;
+      margin-bottom: 2rem;
+      max-width: 100%;
+    }
+    
+    .hero-image {
+      margin-top: 2rem;
+    }
+    
+    .social-links {
+      justify-content: center;
+    }
+    
+    .email-subscribe {
+      margin: 1.5rem auto 0;
+    }
+    
+    .blog-grid {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .hero-title {
+      font-size: 2rem;
+    }
+  }
 </style>
 
   </head>
@@ -242,7 +476,7 @@
   
   
   <span class="md-ellipsis">
-    Tech Blog
+    Blog
     
   </span>
   
