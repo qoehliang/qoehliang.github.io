@@ -182,11 +182,11 @@
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
-  text-align: center;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 2rem;
+  text-align: left;
 }
 
 .md-content h2 {
@@ -195,6 +195,11 @@
   font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2rem;
+  text-align: left;
 }
 
 /* Responsive adjustments */
