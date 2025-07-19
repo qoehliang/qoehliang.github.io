@@ -112,26 +112,12 @@ Any changes made directly to this file will be overwritten.
       <p class="hero-bio">I architect and scale cloud infrastructure at Commonwealth Bank of Australia, specializing in AWS, DevOps, and Kubernetes solutions. I love solving complex distributed systems challenges and mentoring teams on cloud-native best practices.</p>
       
       <div class="social-links">
-        <a href="https://twitter.com/" class="social-link" aria-label="Twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
         <a href="https://github.com/alanliangdev" class="social-link" aria-label="GitHub">
           <i class="fab fa-github"></i>
         </a>
         <a href="https://www.linkedin.com/in/alanliangdev/" class="social-link" aria-label="LinkedIn">
           <i class="fab fa-linkedin-in"></i>
         </a>
-        <a href="https://mastodon.social/" class="social-link" aria-label="Mastodon">
-          <i class="fab fa-mastodon"></i>
-        </a>
-      </div>
-      
-      <div class="email-subscribe">
-        <h3>Subscribe via email</h3>
-        <form class="email-form">
-          <input type="email" class="email-input" placeholder="subscribe@me.please">
-          <button type="submit" class="email-button">Subscribe</button>
-        </form>
       </div>
     </div>
     
@@ -160,7 +146,7 @@ home_page_content += """  </div>
 </div>
 
 <div class="site-footer">
-  © 2024 Alan Liang
+  © 2025 Alan Liang
 </div>"""
 
 # Write the home page content to index.md
