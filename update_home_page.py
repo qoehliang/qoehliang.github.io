@@ -148,8 +148,8 @@ home_page_content += """  </div>
   © 2025 Alan Liang
 </div>"""
 
-# Write the home page content to index.md
-with open('docs/index.md', 'w', encoding='utf-8') as file:
-    file.write(home_page_content)
+# Don't write to index.md as we're using a custom template
+# with open('docs/index.md', 'w', encoding='utf-8') as file:
+#     file.write(home_page_content)
 
-print("Home page updated with the latest blog posts in card format!")
+print("Home page content generated but not written to file as we're using a custom template!")

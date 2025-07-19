@@ -1,20 +1,26 @@
 {% extends "base.html" %}
 
+{% block header %}
+  {% include "partials/header.html" %}
+  {{ super() }}
+{% endblock %}
+
 {% block extrahead %}
   {{ super() }}
   <style>
-    /* Force header to be visible */
-    .md-header {
-      display: flex !important;
-      visibility: visible !important;
-      opacity: 1 !important;
+    /* Add padding to the top of the content to account for the fixed header */
+    .md-main {
+      padding-top: 64px;
     }
     
-    /* Ensure header nav is visible */
-    .md-header__nav {
-      display: flex !important;
-      visibility: visible !important;
-      opacity: 1 !important;
+    /* Hide the default Material header */
+    .md-header {
+      display: none !important;
+    }
+    
+    /* Hide the default tabs */
+    .md-tabs {
+      display: none !important;
     }
   </style>
 {% endblock %}
