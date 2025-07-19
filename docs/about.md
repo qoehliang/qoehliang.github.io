@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 # About Me
 
 I'm a passionate Staff Platform Engineer at Commonwealth Bank of Australia with extensive experience building and scaling cloud-native infrastructure. I specialize in AWS cloud architecture, DevOps automation, and Kubernetes orchestration, helping teams deliver reliable, scalable solutions.
