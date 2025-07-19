@@ -1,12 +1,4 @@
-/* Justin Garrison inspired styles */
-
-:root {
-  --dark-bg: #121e2d;
-  --dark-text: rgba(255, 255, 255, 0.87);
-  --dark-text-secondary: rgba(255, 255, 255, 0.6);
-  --accent-blue: #3b82f6;
-  --subscribe-bg: rgba(59, 130, 246, 0.1);
-}
+/* Universal styles that work in both light and dark mode */
 
 /* Hide sidebars for full width */
 .md-sidebar--primary,
@@ -43,7 +35,7 @@
 .hero-bio {
   font-size: 0.95rem;
   line-height: 1.5;
-  color: var(--dark-text-secondary);
+  color: var(--md-default-fg-color--light);
   margin-bottom: 1.5rem;
 }
 
@@ -69,18 +61,18 @@
 }
 
 .social-link {
-  color: var(--dark-text-secondary);
+  color: var(--md-default-fg-color--light);
   font-size: 1.2rem;
   transition: color 0.2s ease;
 }
 
 .social-link:hover {
-  color: var(--dark-text);
+  color: var(--md-default-fg-color);
 }
 
 /* Email subscription */
 .email-subscribe {
-  background-color: var(--subscribe-bg);
+  background-color: var(--md-primary-fg-color--light);
   border-radius: 8px;
   padding: 1rem;
   margin-top: 1rem;
@@ -91,7 +83,7 @@
 .email-subscribe h3 {
   font-size: 0.9rem;
   margin-bottom: 0.75rem;
-  color: var(--dark-text);
+  color: var(--md-primary-bg-color);
   font-weight: 500;
 }
 
@@ -105,7 +97,8 @@
   padding: 0.5rem;
   border-radius: 4px;
   border: none;
-  background-color: white;
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
   font-size: 0.9rem;
 }
 
@@ -113,8 +106,8 @@
   padding: 0.5rem;
   border-radius: 4px;
   border: none;
-  background-color: var(--accent-blue);
-  color: white;
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s ease;
@@ -122,7 +115,7 @@
 }
 
 .email-button:hover {
-  background-color: #2563eb;
+  background-color: var(--md-primary-fg-color--dark);
 }
 
 /* Blog grid */
@@ -191,13 +184,29 @@
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
-  color: var(--dark-text);
+  color: var(--md-default-fg-color);
 }
 
 .blog-card-description {
   font-size: 0.9rem;
-  color: var(--dark-text-secondary);
+  color: var(--md-default-fg-color--light);
   line-height: 1.4;
+}
+
+/* Main heading styles */
+.md-content h1 {
+  color: var(--md-default-fg-color);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.md-content h2 {
+  color: var(--md-default-fg-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 /* Responsive adjustments */
@@ -231,5 +240,9 @@
 @media screen and (max-width: 600px) {
   .blog-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .md-content h1 {
+    font-size: 1.8rem;
   }
 }
