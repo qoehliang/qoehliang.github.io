@@ -2,7 +2,7 @@ site_name: Alan Liang
 site_url: https://qoehliang.github.io/
 site_author: Alan Liang
 site_description: Staff Platform Engineer specializing in AWS, DevOps, and Kubernetes solutions
-copyright: "&copy; 2024 Alan Liang"
+copyright: "&copy; 2025 Alan Liang"
 
 theme:
   name: material
@@ -99,5 +99,4 @@ extra_javascript:
 nav:
   - Home: index.md
   - About: about.md
-  - Blog: 
-      - blog/index.md
+  - Blog: blog/index.md

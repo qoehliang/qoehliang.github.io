@@ -3,18 +3,18 @@
 {% block extrahead %}
   {{ super() }}
   <style>
-    /* Add any additional styles needed for the home page */
+    /* Force header to be visible */
+    .md-header {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    /* Ensure header nav is visible */
+    .md-header__nav {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
   </style>
-{% endblock %}
-
-{% block scripts %}
-  {{ super() }}
-  {% if page.url_path == "index.html" %}
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // This script will run only on the home page
-      console.log('Home page loaded');
-    });
-  </script>
-  {% endif %}
 {% endblock %}

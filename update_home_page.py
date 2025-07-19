@@ -96,7 +96,6 @@ latest_posts = blog_posts[:6]
 # Generate the home page content
 home_page_content = """---
 hide:
-  - navigation
   - toc
 ---
 
