@@ -1,39 +1,17 @@
 {% extends "base.html" %}
 
-{% block header %}
-<header class="custom-header">
-  <div class="custom-header-container">
-    <div class="custom-header-logo">
-      <a href="{{ config.site_url | default(nav.homepage.url, true) | url }}">
-        {{ config.site_name }}
-      </a>
-    </div>
-    <div class="custom-header-spacer"></div>
-    <nav class="custom-header-nav">
-      <a href="{{ 'blog/' | url }}" class="custom-header-nav-link">Blog</a>
-      <a href="{{ 'about/' | url }}" class="custom-header-nav-link">About</a>
-    </nav>
-  </div>
-</header>
-{{ super() }}
-{% endblock %}
-
 {% block extrahead %}
 {{ super() }}
 <style>
-  /* Hide the default Material header */
+  /* Ensure our custom header styles are applied */
   .md-header {
-    display: none !important;
+    background-color: #121e2d !important;
+    color: rgba(255, 255, 255, 0.87) !important;
   }
   
   /* Hide the default tabs */
   .md-tabs {
     display: none !important;
-  }
-  
-  /* Add padding to account for fixed header */
-  .md-main {
-    padding-top: 64px;
   }
 </style>
 {% endblock %}

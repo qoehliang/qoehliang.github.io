@@ -11,8 +11,6 @@ theme:
   icon:
     logo: material/lightbulb
   custom_dir: docs/overrides
-  include_search_page: false
-  search_index_only: true
   palette:
     # Light mode
     - media: "(prefers-color-scheme: light)"
