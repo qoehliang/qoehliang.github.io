@@ -61,6 +61,7 @@ plugins:
         - Cost Optimization
         - GitOps
         - CI/CD
+        - ArgoCD
       categories_toc: true
       archive_toc: true
   - search
