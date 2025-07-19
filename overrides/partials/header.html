@@ -1,0 +1,12 @@
+<header class="md-header custom-header-override" data-md-component="header">
+  <nav class="md-header__inner md-grid">
+    <a href="{{ config.site_url | default('/', true) }}" title="{{ config.site_name }}" class="md-header__button md-logo">
+      <span class="md-header__title-text">{{ config.site_name }}</span>
+    </a>
+    <div class="md-header__spacer"></div>
+    <div class="md-header__nav-links">
+      <a href="blog/" class="md-header__nav-link">Blog</a>
+      <a href="about/" class="md-header__nav-link">About</a>
+    </div>
+  </nav>
+</header>
