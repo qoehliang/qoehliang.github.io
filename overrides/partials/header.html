@@ -35,15 +35,11 @@
         <a href="{{ 'about/' | url }}" class="md-header__nav-link">About</a>
       </div>
       {% if config.theme.palette %}
-        {% if not config.theme.palette is mapping %}
+        {% if config.theme.palette is iterable and config.theme.palette | length > 1 %}
           <div class="md-header__option">
             <div class="md-select">
-              {% set icon = config.theme.palette | first %}
-              {% if icon.media %}
-                {% set icon = icon.toggle.icon | default("material/brightness-auto") %}
-              {% else %}
-                {% set icon = icon.icon | default("material/brightness-auto") %}
-              {% endif %}
+              {% set icon = config.theme.palette[0] %}
+              {% set icon = icon.toggle.icon | default("material/brightness-auto") %}
               <button class="md-header__button md-icon" title="{{ lang.t('palette.tooltip') }}" data-md-component="palette" data-md-state="auto">
                 {% include ".icons/" ~ icon ~ ".svg" %}
               </button>
