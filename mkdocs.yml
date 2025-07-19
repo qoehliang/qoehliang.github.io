@@ -31,7 +31,6 @@ theme:
     text: Roboto
     code: Roboto Mono
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.path
     - navigation.top

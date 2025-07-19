@@ -41,6 +41,33 @@ body {
 
 .md-header__inner {
   padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.md-header__title {
+  margin-right: 0;
+}
+
+.md-header__spacer {
+  flex-grow: 1;
+}
+
+.md-header-nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-right: 1rem;
+}
+
+.md-header-nav__link {
+  color: var(--dark-text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.md-header-nav__link:hover {
+  color: var(--dark-text-secondary);
 }
 
 /* Main container */
@@ -262,4 +289,20 @@ body {
   .hero-title {
     font-size: 2rem;
   }
+}/* 
+Remove the tabs bar completely */
+.md-tabs {
+  display: none !important;
+}
+
+/* Ensure header has proper spacing */
+.md-header__inner {
+  padding: 0.8rem 1.5rem;
+}
+
+/* Make sure the header is dark */
+.md-header {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+  box-shadow: none !important;
 }
