@@ -7,6 +7,10 @@ repo_url: https://github.com/alanliangdev/alanliangdev.github.io
 repo_name: alanliangdev/alanliangdev.github.io
 edit_uri: ""
 
+# 404 page
+use_directory_urls: true
+not_found_template: 404.md
+
 theme:
   name: material
   favicon: assets/favicon.svg
