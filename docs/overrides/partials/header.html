@@ -39,7 +39,7 @@
           {% for option in config.theme.palette %}
             <input class="md-option" data-md-color-media="{{ option.media }}" data-md-color-scheme="{{ option.scheme | replace(' ', '-') }}" data-md-color-primary="{{ option.primary | replace(' ', '-') }}" data-md-color-accent="{{ option.accent | replace(' ', '-') }}" {% if option.toggle %}aria-label="{{ option.toggle.name }}"{% endif %} type="radio" name="__palette" id="__palette_{{ loop.index }}">
             {% if option.toggle %}
-              <label class="md-header__button md-icon" title="{{ option.toggle.name }}" for="__palette_{{ loop.index }}" hidden>
+              <label class="md-header__button md-icon" title="{{ option.toggle.name }}" for="__palette_{{ loop.index }}">
                 {% include ".icons/" ~ option.toggle.icon ~ ".svg" %}
               </label>
             {% endif %}
