@@ -5,9 +5,6 @@
     <p class="hero-bio">I architect and scale cloud infrastructure at Commonwealth Bank of Australia, specializing in AWS, DevOps, and Kubernetes solutions. I love solving complex distributed systems challenges and mentoring teams on cloud-native best practices.</p>
     
     <div class="social-links">
-      <a href="https://twitter.com/" class="social-link" aria-label="Twitter">
-        <i class="fab fa-twitter"></i>
-      </a>
       <a href="https://github.com/alanliangdev" class="social-link" aria-label="GitHub">
         <i class="fab fa-github"></i>
       </a>

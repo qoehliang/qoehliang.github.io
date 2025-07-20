@@ -3,10 +3,16 @@ site_url: https://alanliangdev.github.io/
 site_author: Alan Liang
 site_description: Staff Platform Engineer specializing in AWS, DevOps, and Kubernetes solutions
 copyright: "&copy; 2025 Alan Liang"
+repo_url: https://github.com/alanliangdev/alanliangdev.github.io
+repo_name: alanliangdev/alanliangdev.github.io
+edit_uri: ""
 
 theme:
   name: material
   custom_dir: docs/overrides
+  favicon: assets/favicon.svg
+  icon:
+    logo: material/cloud
   palette:
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
@@ -35,6 +41,8 @@ theme:
     - search.highlight
     - content.code.copy
     - header.autohide
+    - navigation.instant
+    - navigation.footer
 
 plugins:
   - blog:
@@ -76,6 +84,9 @@ extra:
 extra_css:
   - stylesheets/custom.css
   - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
+
+extra_javascript:
+  - assets/js/theme-toggle.js
 
 nav:
   - Home: index.md
