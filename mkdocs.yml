@@ -6,7 +6,6 @@ copyright: "&copy; 2025 Alan Liang"
 
 theme:
   name: material
-  custom_dir: docs/overrides
   palette:
     # Dark mode
     - media: "(prefers-color-scheme: dark)"

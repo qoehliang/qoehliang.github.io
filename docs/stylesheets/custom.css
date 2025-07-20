@@ -1,39 +1,6 @@
 /* Universal styles that work in both light and dark mode */
 
-/* Header navigation links */
-.md-header__options {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
 
-.md-header__nav-links {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  order: -1; /* This puts nav links before theme toggle and search */
-}
-
-.md-header__nav-link {
-  color: var(--md-primary-bg-color);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-
-.md-header__nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Responsive header navigation */
-@media screen and (max-width: 768px) {
-  .md-header__nav-links {
-    display: none;
-  }
-}
 
 /* Hide sidebars for full width */
 .md-sidebar--primary,
