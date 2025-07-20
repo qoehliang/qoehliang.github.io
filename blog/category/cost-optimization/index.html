@@ -61,21 +61,78 @@
     
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Add navigation links to header
+function addNavLinks() {
+  // Try multiple selectors to find the header
+  const header = document.querySelector('.md-header__inner');
   const headerOptions = document.querySelector('.md-header__options');
-  if (headerOptions) {
+  
+  if (header && headerOptions && !document.querySelector('.md-header__nav-links')) {
     // Create navigation container
     const navLinks = document.createElement('div');
     navLinks.className = 'md-header__nav-links';
-    navLinks.innerHTML = `
-      <a href="blog/" class="md-header__nav-link">Blog</a>
-      <a href="about/" class="md-header__nav-link">About</a>
-    `;
+    navLinks.style.display = 'flex';
+    navLinks.style.gap = '0.5rem';
+    navLinks.style.alignItems = 'center';
+    navLinks.style.order = '-1';
     
-    // Insert before the first child (theme toggle)
+    // Create Blog link
+    const blogLink = document.createElement('a');
+    blogLink.href = 'blog/';
+    blogLink.className = 'md-header__nav-link';
+    blogLink.textContent = 'Blog';
+    blogLink.style.color = 'var(--md-primary-bg-color)';
+    blogLink.style.textDecoration = 'none';
+    blogLink.style.fontSize = '0.9rem';
+    blogLink.style.fontWeight = '500';
+    blogLink.style.padding = '0.5rem 0.75rem';
+    blogLink.style.borderRadius = '4px';
+    blogLink.style.transition = 'background-color 0.2s ease';
+    
+    // Create About link
+    const aboutLink = document.createElement('a');
+    aboutLink.href = 'about/';
+    aboutLink.className = 'md-header__nav-link';
+    aboutLink.textContent = 'About';
+    aboutLink.style.color = 'var(--md-primary-bg-color)';
+    aboutLink.style.textDecoration = 'none';
+    aboutLink.style.fontSize = '0.9rem';
+    aboutLink.style.fontWeight = '500';
+    aboutLink.style.padding = '0.5rem 0.75rem';
+    aboutLink.style.borderRadius = '4px';
+    aboutLink.style.transition = 'background-color 0.2s ease';
+    
+    // Add hover effects
+    [blogLink, aboutLink].forEach(link => {
+      link.addEventListener('mouseenter', function() {
+        this.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+      });
+      link.addEventListener('mouseleave', function() {
+        this.style.backgroundColor = 'transparent';
+      });
+    });
+    
+    navLinks.appendChild(blogLink);
+    navLinks.appendChild(aboutLink);
+    
+    // Insert at the beginning of header options
     headerOptions.insertBefore(navLinks, headerOptions.firstChild);
+    
+    console.log('Navigation links added successfully');
+    return true;
   }
+  return false;
+}
+
+// Try multiple times to ensure it works
+document.addEventListener('DOMContentLoaded', function() {
+  if (!addNavLinks()) {
+    setTimeout(addNavLinks, 100);
+  }
+});
+
+// Also try after window load
+window.addEventListener('load', function() {
+  setTimeout(addNavLinks, 50);
 });
 </script>
 
