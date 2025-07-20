@@ -10,14 +10,15 @@
 
 /* Full width content with proper padding */
 .md-main__inner {
-  margin: 0;
+  margin: 0 auto;
   max-width: 100%;
+  width: 100%;
 }
 
 .md-content__inner {
-  padding: 1.5rem clamp(1rem, 5vw, 2rem);
+  padding: 1.5rem 0;
   margin: 0 auto;
-  max-width: 100%;
+  max-width: var(--md-grid-size);
   width: 100%;
 }
 
@@ -26,7 +27,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: clamp(1rem, 5vw, 2rem);
+  padding: 0;
   width: 100%;
   max-width: 100%;
   margin: 0 auto 3rem;
@@ -84,7 +85,7 @@
   gap: clamp(0.5rem, 2vw, 1.5rem);
   margin: 1rem auto 2rem;
   width: 100%;
-  padding: 0 clamp(1rem, 5vw, 2rem);
+  padding: 0;
 }
 
 /* Blog card */
@@ -158,7 +159,7 @@
   font-weight: 700;
   margin-bottom: 0.75rem;
   width: 100%;
-  padding: 0 clamp(1rem, 5vw, 2rem);
+  padding: 0;
   text-align: left;
 }
 
@@ -169,7 +170,7 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
   width: 100%;
-  padding: 0 clamp(1rem, 5vw, 2rem);
+  padding: 0;
   text-align: left;
 }
 
@@ -180,44 +181,57 @@
     text-align: center;
     padding: 1.5rem 1rem;
   }
-  
+
   .hero-content {
     margin-right: 0;
     margin-bottom: 2rem;
     width: 100%;
   }
-  
+
   .social-links {
     justify-content: center;
   }
 }
 
-/* Add responsive header styles */
-@media screen and (max-width: 768px) {
-  .md-header__nav-links {
-    display: none; /* Hide custom nav links on small screens */
+/* Removed custom header styles that were causing issues */
+
+/* 
+Ensure content aligns with navigation tabs */
+.md-grid {
+  max-width: 61rem;
+}
+
+/* Container for all main content to match header width */
+.content-container {
+  max-width: var(--md-grid-size);
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 0.6rem;
+}
+
+@media screen and (max-width: 76.1875em) {
+  .md-grid {
+    padding: 0 0.8rem;
   }
-}/* He
-ader styles */
-.md-header__nav-links {
+}
+
+/* Ensure navigation tabs align with content */
+.md-tabs__list {
+  margin: 0 auto;
+  max-width: var(--md-grid-size);
+}
+
+/* Ensure content aligns with navigation tabs */
+.md-content {
+  max-width: 100%;
+}
+
+/* Fix search dialog */
+.md-search__form {
+  background-color: var(--md-primary-fg-color--light);
+}
+
+/* Fix theme toggle */
+.md-header__option {
   display: flex;
-  gap: 1rem;
-}
-
-.md-header__nav-link {
-  color: var(--md-primary-bg-color);
-  text-decoration: none;
-  font-weight: 500;
-  transition: opacity 0.2s;
-}
-
-.md-header__nav-link:hover {
-  opacity: 0.8;
-}
-
-/* Make sure the header is responsive */
-@media screen and (max-width: 768px) {
-  .md-header__nav-links {
-    display: none; /* Hide custom nav links on mobile - they'll be in the drawer menu */
-  }
 }
