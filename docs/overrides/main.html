@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+{{ super() }}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Add navigation links to header
+  const headerOptions = document.querySelector('.md-header__options');
+  if (headerOptions) {
+    // Create navigation container
+    const navLinks = document.createElement('div');
+    navLinks.className = 'md-header__nav-links';
+    navLinks.innerHTML = `
+      <a href="blog/" class="md-header__nav-link">Blog</a>
+      <a href="about/" class="md-header__nav-link">About</a>
+    `;
+    
+    // Insert before the first child (theme toggle)
+    headerOptions.insertBefore(navLinks, headerOptions.firstChild);
+  }
+});
+</script>
+{% endblock %}
