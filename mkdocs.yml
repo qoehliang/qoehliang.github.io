@@ -9,7 +9,6 @@ edit_uri: ""
 
 theme:
   name: material
-  custom_dir: docs/overrides
   favicon: assets/favicon.svg
   icon:
     logo: material/cloud

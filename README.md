@@ -41,8 +41,8 @@ To run the site locally:
 │   │   ├── posts/            # Individual blog posts
 │   │   ├── .authors.yml      # Blog author information
 │   │   └── index.md          # Blog landing page
-│   ├── overrides/            # Theme overrides
-│   │   └── main.html         # Main template override
+│   ├── assets/js/            # JavaScript files
+│   │   └── theme-toggle.js   # Theme toggle functionality
 │   ├── stylesheets/          # CSS stylesheets
 │   │   └── custom.css        # Custom styles
 │   ├── about.md              # About page

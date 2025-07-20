@@ -201,8 +201,8 @@ Ensure content aligns with navigation tabs */
   max-width: 61rem;
 }
 
-/* Container for all main content to match header width */
-.content-container {
+/* Main content container */
+.md-content__inner {
   max-width: var(--md-grid-size);
   margin: 0 auto;
   width: 100%;
